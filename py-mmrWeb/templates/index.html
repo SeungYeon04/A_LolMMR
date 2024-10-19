@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMR 조회</title>
+</head>
+<body>
+    <h1>MMR 조회</h1>
+    <form method="POST">
+        <label for="game_name">소환사 이름:</label>
+        <input type="text" id="game_name" name="game_name" required><br><br>
+
+        <label for="tag_line">태그:</label>
+        <input type="text" id="tag_line" name="tag_line" required><br><br>
+    
+        <input type="submit" value="MMR 조회">
+    </form>
+
+    {% if ranked_info %} 
+        <h2>API 응답 정보</h2>
+        <pre>{{ account_info }}</pre>
+    {% else %}
+        <pre>{{ account_info }}</pre>
+    {% endif %}    
+</body>
+</html>
